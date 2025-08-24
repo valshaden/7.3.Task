@@ -4,10 +4,13 @@
 ## в поле ввода и нажимать на кнопку "Отправить". Изображение, сгенерированное 
 ## по ссылке, должно открываться в отдельном вторичном окне. 
 
-Код проекта:
+## Код проекта:
+
+```python
 import asyncio
 from g4f.client import AsyncClient
-def main():
+
+async def main():
     client = AsyncClient()
     response = await client.images.generate(
         prompt="a white siamese cat",
@@ -17,4 +20,6 @@ def main():
     )
     image_url = response.data[0].url
     print(f"Generated image URL: {image_url}")
+
 asyncio.run(main())
+```
