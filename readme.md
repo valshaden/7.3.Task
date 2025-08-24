@@ -6,8 +6,7 @@
 
 ## Код проекта:
 
-```
-python
+```python
 import asyncio
 from g4f.client import AsyncClient
 
